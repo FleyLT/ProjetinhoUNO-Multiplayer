@@ -13,6 +13,19 @@
 </html>
 
 <?php 
-include 'funcoes/conexao.php'
+include 'funcoes/conexao.php';
+
+$query = "SELECT id, usuario_id, nome_personagem, nivel from fichas";
+$resultado = $conn->query($query);
+
+
+if ($resultado->num_rows > 0) {
+    while ($linha = $resultado->fetch_assoc()){
+        echo "ID: " . $linha["id"] . " - Nome: " . $linha["nome"];
+    }
+} else {
+    echo "Nenhum dado encontrado";
+}
+$conexao->close()
 
 ?>
