@@ -11,3 +11,8 @@
 </body>
 <script src="funcoes/index.js"></script>
 </html>
+
+<?php 
+include 'funcoes/conexao.php'
+
+?>
